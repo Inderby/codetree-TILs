@@ -20,7 +20,7 @@ int ps(int cx, int cy){
 
     if(nx >= n || ny >= n)
       continue;
-    min_num = min(max(grid[nx][ny], ps(nx, ny)),min_num);
+    min_num = min(max(grid[cx][cy], ps(nx, ny)),min_num);
   }
   return dp[cx][cy] = min_num;
 }
