@@ -9,8 +9,8 @@ int main() {
   // freopen("output.txt", "w", stdout);
   int n, m;
   cin >> n >> m;
-  vector<vector<int>> grid(n, vector<int>(m, 0));
-  vector<vector<int>> dp(n, vector<int>(m, 0));
+  vector<vector<short>> grid(n, vector<short>(m, 0));
+  vector<vector<short>> dp(n, vector<short>(m, 0));
 
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
