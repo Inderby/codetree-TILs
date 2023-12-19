@@ -35,7 +35,7 @@ int main() {
       }
     }
   }
-  int result = 0;
+  short result = 0;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
       result = max(dp[i][j], result);
