@@ -26,9 +26,7 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			weight[i] = Integer.parseInt(st.nextToken());
 			value[i] = Integer.parseInt(st.nextToken());
-			if(weight[i] <= m) {
-				dp[weight[i]] = value[i];
-			}
+			
 		}
 		dp[0] = 0;
 	}
@@ -41,12 +39,11 @@ public class Main {
 				}
 			}
 		}
-		
-		if(dp[m] == -1) {
-			System.out.println(0);
-		}else {
-			System.out.println(dp[m]);
+		int ans = 0;
+		for(int i = 1; i <= m; i++) {
+			ans = Math.max(ans, dp[i]);
 		}
+		System.out.println(ans);
 	}
 
 	public static void main(String[] args) throws Exception {
