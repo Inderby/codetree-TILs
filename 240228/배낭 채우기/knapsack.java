@@ -32,10 +32,10 @@ public class Main {
 	}
 
 	static void solve() throws Exception {
-		for(int i = 1; i <= m; i++) {
-			for(int j = 1; j <= n; j++) {
-				if(i - weight[j] >= 0 && dp[i - weight[j]] != -1) {
-					dp[i] = Math.max(dp[i] , dp[i - weight[j]] + value[j]); 
+		for(int i = 1; i <= n; i++) {
+			for(int j = m; j >= 0; j--) {
+				if(j - weight[i] >= 0 && dp[j - weight[i]] != -1) {
+					dp[j] = Math.max(dp[j] , dp[j - weight[i]] + value[i]); 
 				}
 			}
 		}
