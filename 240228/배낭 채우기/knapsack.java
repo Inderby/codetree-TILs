@@ -26,7 +26,9 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			weight[i] = Integer.parseInt(st.nextToken());
 			value[i] = Integer.parseInt(st.nextToken());
-			dp[weight[i]] = value[i];
+			if(weight[i] <= m) {
+				dp[weight[i]] = value[i];
+			}
 		}
 		dp[0] = 0;
 	}
