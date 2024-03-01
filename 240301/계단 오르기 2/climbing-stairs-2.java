@@ -20,9 +20,9 @@ public class Main {
 		n = Integer.parseInt(br.readLine());
 		arr = new int[n + 1];
 		dp = new int[n + 1][4];
-//		for (int i = 0; i <= n; i++) {
-//			Arrays.fill(dp[i], -1);
-//		}
+		for (int i = 0; i <= n; i++) {
+			Arrays.fill(dp[i], -1);
+		}
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= n; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
@@ -51,12 +51,11 @@ public class Main {
             }
         }
      // 가능한 모든 경우에서 최대 가치를 찾아 출력합니다.
-        for(int[] i : dp) {
-        	for(int j : i) {
-        		System.out.print(j + " ");
-        	}
-        	System.out.println();
-        }
+        int ans = 0;
+        for (int j = 0; j <= 3; j++)
+            ans = Math.max(ans, dp[n][j]);
+
+        System.out.println(ans);
 	}
 
 	public static void main(String[] args) throws Exception {
