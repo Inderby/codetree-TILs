@@ -19,9 +19,9 @@ public class Main {
 	static void input() throws Exception {
 		n = Integer.parseInt(br.readLine());
 		arr = new int[n + 1];
-		dp = new int[n + 1][3];
+		dp = new int[n + 1][4];
 		for (int i = 0; i <= n; i++) {
-			Arrays.fill(dp[i], Integer.MIN_VALUE);
+			Arrays.fill(dp[i], -1);
 		}
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= n; i++) {
@@ -33,16 +33,23 @@ public class Main {
 
 	static void solve() throws Exception {
 		for (int i = 1; i <= n; i++) {
-			for (int j = 0; j < 3; j++) {
-				if (j - 1 >= 0) {
+			for (int j = 0; j < 4; j++) {
+				if (j - 1 >= 0 && dp[i-1][j-1] != -1) {
 					dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - 1] + arr[i]);
 				}
 
-				if (i - 2 >= 0) {
+				if (i - 2 >= 0 && dp[i-2][j] != -1) {
 					dp[i][j] = Math.max(dp[i][j], dp[i - 2][j] + arr[i]);
 				}
 			}
 		}
+		
+//		for(int[] i : dp) {
+//			for(int j : i) {
+//				System.out.print(j + " ");
+//			}
+//			System.out.println();
+//		}
 		int ans = 0;
 		for (int i = 0; i < 3; i++) {
 			ans = Math.max(ans, dp[n-1][i]);
@@ -54,7 +61,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws Exception {
-	
+		
 		br = new BufferedReader(new InputStreamReader(System.in));
 		bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		input();
