@@ -40,13 +40,14 @@ public class Main {
 				}
 			}
 		}
-		int ans = 0;
+		int ans = -1;
 		for(int i = 0; i < dp.length; i++) {
 			if(dp[i] >= m) {
-				System.out.println(i);
-				return;
+				ans = i;
+				break;
 			}
 		}
+		System.out.println(ans);
 	}
 
 	public static void main(String[] args) throws Exception {
