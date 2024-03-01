@@ -20,9 +20,7 @@ public class Main {
 		n = Integer.parseInt(br.readLine());
 		arr = new int[n + 1];
 		dp = new int[n + 1][4];
-		for (int i = 0; i <= n; i++) {
-			Arrays.fill(dp[i], -1);
-		}
+
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= n; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
