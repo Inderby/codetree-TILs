@@ -51,10 +51,8 @@ public class Main {
 //			System.out.println();
 //		}
 		int ans = 0;
-		for (int i = 0; i < 3; i++) {
-			ans = Math.max(ans, dp[n-1][i]);
-		}
-		for (int i = 0; i < 3; i++) {
+
+		for (int i = 0; i < 4; i++) {
 			ans = Math.max(ans, dp[n][i]);
 		}
 		System.out.println(ans);
