@@ -45,13 +45,16 @@ public class Main {
 		}
 		int ans = 0;
 		for (int i = 0; i < 3; i++) {
+			ans = Math.max(ans, dp[n-1][i]);
+		}
+		for (int i = 0; i < 3; i++) {
 			ans = Math.max(ans, dp[n][i]);
 		}
 		System.out.println(ans);
 	}
 
 	public static void main(String[] args) throws Exception {
-		
+	
 		br = new BufferedReader(new InputStreamReader(System.in));
 		bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		input();
