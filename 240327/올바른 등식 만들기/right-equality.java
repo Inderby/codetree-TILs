@@ -21,8 +21,8 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
-        dp[1][OFFSET + arr[1]] = 1;
-        dp[1][OFFSET - arr[1]] = 1;
+        dp[1][OFFSET + arr[1]] += 1;
+        dp[1][OFFSET - arr[1]] += 1;
     }
 
     static void solve() {
@@ -37,7 +37,12 @@ public class Main {
                 }
             }
         }
-        
+//        for(long[] a : dp){
+//            for(long b : a){
+//                System.out.print(b + " ");
+//            }
+//            System.out.println();
+//        }
         System.out.println(dp[n][OFFSET + m]);
     }
 
