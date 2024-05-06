@@ -35,6 +35,7 @@ public class Main {
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){
                 result += dp[n][i][j];
+                result %= 1000000007;
             }
         }
         System.out.println(result);
