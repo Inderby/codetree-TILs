@@ -1,5 +1,3 @@
-import SamSungDXSpecialLecture.w1.PartialSort;
-
 import java.io.*;
 import java.util.StringTokenizer;
 
