@@ -42,9 +42,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/input.txt"));
-        System.setOut(new PrintStream( new FileOutputStream("src/output.txt")));
-
+       
         br = new BufferedReader(new InputStreamReader(System.in));
         bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
