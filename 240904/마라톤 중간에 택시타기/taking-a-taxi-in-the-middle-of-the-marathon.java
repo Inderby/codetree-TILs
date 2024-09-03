@@ -1,3 +1,5 @@
+import SamSungDXSpecialLecture.w1.PartialSort;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -24,11 +26,11 @@ public class Main {
             int y = Integer.parseInt(st.nextToken());
             arr[i] = new Pair(x, y);
             if(i != 0)
-                l[i] += arr[i].cal(arr[i-1]);
+                l[i] = l[i-1] + arr[i].cal(arr[i-1]);
         }
 
         for (int i = n-2; i >= 0 ; i--) {
-            r[i] += arr[i].cal(arr[i+1]);
+            r[i] = arr[i].cal(arr[i+1]) + r[i+1];
         }
 
 
@@ -42,7 +44,8 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-
+        System.setIn(new FileInputStream("src/input.txt"));
+        System.setOut(new PrintStream( new FileOutputStream("src/output.txt")));
 
         br = new BufferedReader(new InputStreamReader(System.in));
         bw = new BufferedWriter(new OutputStreamWriter(System.out));
