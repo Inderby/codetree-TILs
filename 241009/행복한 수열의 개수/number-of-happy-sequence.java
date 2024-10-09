@@ -29,16 +29,17 @@ public class Main {
             int target = -1;
             int cnt = 0;
             for(int j = 1; j <= n; j++){
+                
                 if(target != arr[i][j]){
-                   cnt = 1;
+                   cnt = 0;
                    target = arr[i][j];
-                   continue;
                 }
                 cnt++;
                 if(cnt == m){
                     happy = true;
                     break;
                 }
+                
             }
 
             if(happy)
@@ -48,12 +49,12 @@ public class Main {
         for(int i = 1; i <= n; i++){
             boolean happy = false;
             int target = -1;
-            int cnt = 0;
+            int cnt = 1;
             for(int j = 1; j <= n; j++){
+                
                 if(target != arr[j][i]){
-                   cnt = 1;
+                   cnt = 0;
                    target = arr[j][i];
-                   continue;
                 }
                 cnt++;
                 if(cnt == m){
