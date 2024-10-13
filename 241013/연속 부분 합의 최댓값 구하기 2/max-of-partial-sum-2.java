@@ -17,7 +17,7 @@ public class Main {
     }
 
     static void solve(){
-        int ans = 0;
+        int ans = -100000;
         int sum = 0;
 
         for(int i = 0; i < n; i++){
