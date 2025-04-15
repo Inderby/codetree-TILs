@@ -7,7 +7,7 @@ int main() {
     int temp = a;
     a = b;
     b = temp;
-    printf("$d\n", a);
-    printf("$d", b);
+    printf("%d\n", a);
+    printf("%d", b);
     return 0;
 }
