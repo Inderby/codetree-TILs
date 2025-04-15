@@ -5,6 +5,6 @@ int main() {
     double ft = 30.48f;
     double input;
     scanf("%lf", &input);
-    printf("%lf", input * ft);
+    printf("%.1lf", input * ft);
     return 0;
 }
