@@ -5,9 +5,9 @@ int main() {
     int a, b;
     scanf("%d %d", &a, &b);
     if(a % 2 == 0){
-        printf("even");
+        printf("even\n");
     }else {
-        printf("odd");
+        printf("odd\n");
     }
 
     if(b % 2 == 0){
