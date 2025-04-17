@@ -3,6 +3,7 @@
 int main() {
     // Please write your code here.
     int a;
+    scanf("%d", &a);
     if(a >= 90){
         printf("A");
     }
