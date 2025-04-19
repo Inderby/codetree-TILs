@@ -2,13 +2,13 @@
 #include <string.h>
 int main() {
     // Please write your code here.
-    char s[21];
+    char s[1001];
     scanf("%s", s);
     char s1[3];
 
     scanf("%s", s1);
     int count1 = 0;
-    for(int i = 0; i <= strlen(s) - 2; i++){
+    for(int i = 0; i <= strlen(s) - strlen(s1); i++){
         int f1 = 1, f2 = 1;
         for(int j = 0; j < 2; j++){
             if(s[i + j] != s1[j]){
