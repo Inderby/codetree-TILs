@@ -33,7 +33,7 @@ int main() {
     ans[ansIdx++] = c;
     int mod = 1000;
     int flag = 0;
-    while(count){
+    while(mod){
         int digit = count / mod;
         if(digit != 0 || flag){
             ans[ansIdx++] = '0' +  digit;
