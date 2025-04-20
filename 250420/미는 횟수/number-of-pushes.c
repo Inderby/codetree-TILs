@@ -15,7 +15,7 @@ int main() {
             b[j] = b[j - 1];
         }
         b[0] = temp;
-        n++;
+        n = n + 1;
     }
     
     printf("%d", n == len ? -1 : n);
