@@ -11,7 +11,7 @@ int main() {
         }
     }
     printf("%d\n", idx - 1);
-    for(int i = 0; i < idx; i++){
+    for(int i = 0; i < idx - 1; i++){
         if(i % 2 == 1) continue;
         printf("%s\n", s[i]);
     }
