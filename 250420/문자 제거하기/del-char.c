@@ -4,10 +4,10 @@ int main() {
     // Please write your code here.
     char s[21];
     scanf("%s", s);
-    while(strlen(s) != 1){
+    while(strlen(s) > 1){
         int idx;
         scanf("%d", &idx);
-        if(strlen(s) < idx){
+        if(strlen(s) - 1 < idx){
             idx = strlen(s) - 1;
         }
         int i = idx;
@@ -15,6 +15,7 @@ int main() {
             s[i] = s[i + 1];
         }
         s[i] = '\0';
+        
         printf("%s\n", s);
     }
     return 0;
